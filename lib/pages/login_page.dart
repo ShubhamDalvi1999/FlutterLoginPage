@@ -1,3 +1,4 @@
+import 'package:catelogeapp/utils/routes.dart';
 import "package:flutter/material.dart";
 
 class LoginPage extends StatelessWidget {
@@ -8,28 +9,31 @@ class LoginPage extends StatelessWidget {
       body: Container(
         color: Colors.white,
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
                 "assets/images/login_image.png",
-                 width: 300,
-                 height: 289,
+                 width: 258,
+                 height: 200,
                 fit: BoxFit.cover ,),
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(40.0, 10.0, 0.0, 0.0),
-              child: Text("Hello",
-              style: TextStyle(
-                fontSize: 40.0,
-                fontWeight: FontWeight.bold,
-                fontFamily: 'Montserrat',              
-                color: Colors.black,
+            Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.fromLTRB(40.0, 0.0, 0.0, 0.0),
+                  child: Text("Hello",
+                  style: TextStyle(
+                  fontSize: 40.0,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Montserrat',              
+                  color: Colors.black,
               ),
               ),
+                ),]
             ),
             Row(
               children: [
@@ -111,6 +115,27 @@ class LoginPage extends StatelessWidget {
                 ],
               ),
             ),
+            SizedBox(
+              height:30
+            ),
+            ElevatedButton(
+              onPressed:(){ 
+                Navigator.pushNamed(context, MyRoutes.HomeRoute);
+                },
+              style: TextButton.styleFrom(
+                minimumSize: Size(200, 50),
+                backgroundColor: Colors.green
+              ),
+              child:Text(
+              "Login",
+              style: TextStyle(
+              fontSize: 20,
+              color: Colors.white,
+              ),
+             ),
+             
+
+            )
           ],
         ),
       ),
