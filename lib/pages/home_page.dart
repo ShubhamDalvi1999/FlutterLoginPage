@@ -1,3 +1,4 @@
+import 'package:catelogeapp/widgets/drawer.dart';
 import "package:flutter/material.dart";
 
 class HomePage extends StatelessWidget {
@@ -7,11 +8,17 @@ class HomePage extends StatelessWidget {
     int day=30;
     String name="FlutterAppDev";
     return Scaffold(
-        body: Center(
-          child: Container(
-            child: Text("Welcome to $day day of flutter by $name"),
-          ),
+      appBar: AppBar(
+        title: Text("Catelog App"),
+      ),
+      body: Center(
+        child: Container(
+          child: Text("Welcome to $day day of flutter by $name"),
         ),
-      );
+      ),
+      drawer: MyDrawer(),
+      
+
+    );
   }
 }

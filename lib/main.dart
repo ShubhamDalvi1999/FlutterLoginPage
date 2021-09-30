@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
       routes:{
-        "/":(context)=> LoginPage(),
+        "/":(context)=> HomePage(),
         MyRoutes.HomeRoute:(context)=> HomePage(),
         MyRoutes.LoginRoute:(context)=> LoginPage(),
       },
