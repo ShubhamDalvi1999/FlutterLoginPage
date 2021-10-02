@@ -52,7 +52,8 @@ class Item {
 
   factory Item.fromMap(Map<String, dynamic> map) {
     if (map == null) {
-      return Item(id: 0, name: "name", desc: "desc", price: 0, color: "color", image: "image");
+      return Item(id: 0, name: "name", desc: "desc", price: 0, color: "color",
+       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISJ6msIu4AU9_M9ZnJVQVFmfuhfyJjEtbUm3ZK11_8IV9TV25-1uM5wHjiFNwKy99w0mR5Hk&usqp=CAc");
     }
 
     return Item(

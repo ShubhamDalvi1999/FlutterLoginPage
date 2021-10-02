@@ -5,26 +5,32 @@ import 'package:catelogeapp/models/catalog.dart';
 import 'package:catelogeapp/widgets/drawer.dart';
 import 'package:catelogeapp/widgets/item_widget.dart';
 
-class HomePage extends StatelessWidget {
-final int days = 30;
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  final int days = 30;
 
   final String name = "Codepur";
 
+  @override
   void initState() {
-    //super.initState();
+    super.initState();
     loadData();
   }
 
   loadData() async {
     await Future.delayed(Duration(seconds: 2));
     final catalogJson =
-        await rootBundle.loadString("assets/files/catalog.json");
+    await rootBundle.loadString("assets/files/catalog.json");
     final decodedData = jsonDecode(catalogJson);
     var productsData = decodedData["products"];
     CatalogModel.items = List.from(productsData)
         .map<Item>((item) => Item.fromMap(item))
         .toList();
-    //setState(() {});
+    setState(() {});
   }
 
   @override
