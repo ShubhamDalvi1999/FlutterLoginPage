@@ -83,7 +83,7 @@ class MyDrawer extends StatelessWidget {
                 color: Colors.white,
                 
               ),
-              title: Text("My Whishlist",
+              title: Text("My Wishlist",
               style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
