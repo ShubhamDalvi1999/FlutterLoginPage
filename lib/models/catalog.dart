@@ -21,14 +21,7 @@ class Item {
     required this.image,
   });
 
-  Item copyWith({
-    int? id,
-    String? name,
-    String? desc,
-    num? price,
-    String? color,
-    String? image,
-  }) {
+  Item copyWith({int? id, String? name, String? desc, num? price, String? color, String? image,}) {
     return Item(
       id: id ?? this.id,
       name: name ?? this.name,
@@ -51,6 +44,7 @@ class Item {
   }
 
   factory Item.fromMap(Map<String, dynamic> map) {
+    // ignore: unnecessary_null_comparison
     if (map == null) {
       return Item(id: 0, name: "name", desc: "desc", price: 0, color: "color",
        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISJ6msIu4AU9_M9ZnJVQVFmfuhfyJjEtbUm3ZK11_8IV9TV25-1uM5wHjiFNwKy99w0mR5Hk&usqp=CAc");
