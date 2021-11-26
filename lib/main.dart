@@ -1,3 +1,4 @@
+import 'package:catelogeapp/pages/cart_page.dart';
 import 'package:catelogeapp/pages/home_page.dart';
 import 'package:catelogeapp/pages/login_page.dart';
 import 'package:catelogeapp/utils/routes.dart';
@@ -19,10 +20,12 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
+      initialRoute: MyRoutes.HomeRoute,
       routes:{
-        "/":(context)=> HomePage(),
+        "/":(context)=> LoginPage(),
         MyRoutes.HomeRoute:(context)=> HomePage(),
         MyRoutes.LoginRoute:(context)=> LoginPage(),
+        MyRoutes.CartRoute: (context)=> CartPage(),
       },
     );
   }

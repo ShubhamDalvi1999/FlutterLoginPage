@@ -13,7 +13,7 @@ class HomeDetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
       ),
       backgroundColor: MyTheme.creamColor,
       bottomNavigationBar: ButtonBar(
@@ -40,21 +40,23 @@ class HomeDetailsPage extends StatelessWidget {
             Hero(
               tag: Key(catalog.id.toString()),
               child: Image.network(catalog.image)
-            ).p16(),
+            ).h32(context),
             Expanded(
               child:VxArc(
                 height: 30.0,
                 arcType: VxArcType.CONVEY,
                 edge: VxEdge.TOP,
                 child: Container(
+
                   width: context.screenWidth,
                   child: Column(
                     children:[
                     catalog.name.text.xl5.bold.make(),
-                    catalog.desc.text.xl.textStyle(context.captionStyle).make(),
+                    catalog.desc.text.xl3.textStyle(context.captionStyle).make(),
+                    "Duo diam accusam aliquyam duo eos vero magna takimata consetetur. At clita dolores eirmod invidunt eirmod et ipsum, magna amet.".text.make()
                     ],
                   ).py64(),
-                  color: Colors.white,),
+                  color: Colors.white12,),
               ))
           ]
         ),
