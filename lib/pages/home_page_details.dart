@@ -36,7 +36,7 @@ class HomeDetailsPage extends StatelessWidget {
       body: SafeArea(
         bottom: false,
         child: Column(
-          children:[
+          children:[   
             Hero(
               tag: Key(catalog.id.toString()),
               child: Image.network(catalog.image)
